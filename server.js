@@ -18,6 +18,6 @@ const PORT = process.env.PORT || 5000;
 //Pass the port and run a callback
 app.listen(PORT, async () => {
   console.log(`Server started on port ${PORT}`);
-  await sequelize.sync({ force: true });
-  console.log(`Database synced`);
+  await sequelize.authenticate();
+  console.log(`Database Connected`);
 });
